@@ -1,11 +1,11 @@
-from setuptools import setup
+import setuptools
 
 VERSION = "0.2.0"
 NAME = "e3dc"
- 
-install_requires = ["requests", "websocket-client", "tzlocal", "pytz"]
 
-setup(
+install_requires = ["requests", "websocket-client", "tzlocal", "pytz", "python-dateutil"]
+
+setuptools.setup(
     name=NAME,
     version=VERSION,
     description="E3/DC client for python.",
@@ -15,5 +15,5 @@ setup(
     license="MIT",
     url="https://github.com/fsantini/python-e3dc.git",
     install_requires=install_requires,
-    packages=["e3dc"]
+    packages=setuptools.find_packages()
 )
